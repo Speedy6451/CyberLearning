@@ -1,4 +1,4 @@
-package com.mygdx.game
+package com.mygdx.game;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.ScreenAdapter;
@@ -11,12 +11,12 @@ import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.graphics.GL20;
 
 public class LevelOne extends ScreenAdapter {
-	CyberLearningGame game;
+	MyGdxGame game;
 	TiledMap map;
 	TiledMapRenderer tiledMapRenderer;
 	Music music;
 
-	public LevelOne(CyberLearningGame game) {
+	public LevelOne(MyGdxGame game) {
 		this.game = game;
 	}
 

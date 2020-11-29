@@ -8,10 +8,10 @@ import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL20;
 
 public class TitleScreen extends ScreenAdapter {
-	CyberLearningGame game;
+	MyGdxGame game;
 	Music titleMusic;
 
-	public TitleScreen(CyberLearningGame game) {
+	public TitleScreen(MyGdxGame game) {
 		this.game = game;
 	}
 
@@ -39,8 +39,8 @@ public class TitleScreen extends ScreenAdapter {
 		Gdx.gl.glClearColor(0, .25f, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		game.batch.begin();
-		game.font.draw(game.batch, "I forgot the title", CyberLearningGame.screenX/4, CyberLearningGame.screenY*.75f);
-		game.font.draw(game.batch, "Press enter to begin", CyberLearningGame.screenX/4, CyberLearningGame.screenY/2);
+		game.font.draw(game.batch, "I forgot the title", MyGdxGame.screenX/4, MyGdxGame.screenY*.75f);
+		game.font.draw(game.batch, "Press enter to begin", MyGdxGame.screenX/4, MyGdxGame.screenY/2);
 		game.batch.end();
 
 	}
