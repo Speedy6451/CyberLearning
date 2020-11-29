@@ -4,6 +4,9 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.audio.Music;
+import com.badlogic.gdx.maps.MapLayer;
+import com.badlogic.gdx.maps.MapObject;
+import com.badlogic.gdx.maps.MapObjects;
 import com.badlogic.gdx.maps.MapRenderer;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TiledMapRenderer;
@@ -39,6 +42,11 @@ public class LevelOne extends ScreenAdapter {
 		map = new TmxMapLoader().load("levels/level1.tmx");
 		tiledMapRenderer = new OrthogonalTiledMapRenderer(map);
 		game.camera.setToOrtho(false,10*16,6*16);
+
+		MapLayer entityLayer = map.getLayers().get("Entities");
+		MapObjects objects = entityLayer.getObjects();
+		MapObject player = objects.get("Player1");
+		player.setVisible(true);
 
 		Gdx.input.setInputProcessor(new InputAdapter() {
 			@Override
