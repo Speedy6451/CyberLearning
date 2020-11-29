@@ -37,11 +37,11 @@ public class TitleScreen extends ScreenAdapter {
 
 	@Override
 	public void render(float delta) {
-		Gdx.gl.glClearColor(0, .25f, 0, 1);
+		Gdx.gl.glClearColor(MyGdxGame.backgroundColor.x, MyGdxGame.backgroundColor.y,MyGdxGame.backgroundColor.z,1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		game.batch.begin();
-		game.font.draw(game.batch, "bit revanche", MyGdxGame.screenX/4, MyGdxGame.screenY*.75f);
-		game.font.draw(game.batch, "press enter to begin", MyGdxGame.screenX/4, MyGdxGame.screenY/2);
+		game.font.draw(game.batch, "bit   revanche", MyGdxGame.screenX/4, MyGdxGame.screenY*.75f);
+		game.font.draw(game.batch, "press   enter   to   begin", MyGdxGame.screenX/4, MyGdxGame.screenY/2);
 		game.batch.end();
 
 	}

@@ -78,7 +78,7 @@ public class LevelOne extends ScreenAdapter {
 	@Override
 	public void render(float delta) {
 		deltaT = delta;
-		Gdx.gl.glClearColor(0, .25f, 0, 1);
+		Gdx.gl.glClearColor(MyGdxGame.backgroundColor.x, MyGdxGame.backgroundColor.y,MyGdxGame.backgroundColor.z,1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		game.camera.update();
 		tiledMapRenderer.setView(game.camera);
