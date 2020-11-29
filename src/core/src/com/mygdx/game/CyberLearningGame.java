@@ -8,7 +8,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class CyberLearningGame extends Game {
 	SpriteBatch batch;
 	BitmapFont font;
-	OrthographicCamera camera;
+	public OrthographicCamera camera;
 	public static int screenX = 800;
 	public static int screenY = 480;
 
