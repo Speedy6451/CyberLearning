@@ -28,10 +28,10 @@ public class TitleScreen extends ScreenAdapter {
 			public boolean keyDown(int keyCode) {
 				if (keyCode == Input.Keys.ENTER) {
 					game.setScreen(new LevelOne(game));
-					}
-					return true;
 				}
-			});
+				return true;
+			}
+		});
 	}
 
 	@Override
