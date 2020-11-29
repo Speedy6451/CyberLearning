@@ -30,10 +30,11 @@ public class LevelOne extends ScreenAdapter {
 
 	@Override
 	public void show() {
-		// play background music (tbd)
-		// music = Gdx.audio.newMusic(Gdx.files.internal("music/[tbd]"));
-		// music =music.setLooping(true);
-		// music =music.play();
+		// play background music
+		music = Gdx.audio.newMusic(Gdx.files.internal("music/Soliloquy.mp3"));
+		music.setLooping(false);
+		music.setVolume(game.volume);
+		music.play();
 
 		map = new TmxMapLoader().load("levels/level1.tmx");
 		tiledMapRenderer = new OrthogonalTiledMapRenderer(map);

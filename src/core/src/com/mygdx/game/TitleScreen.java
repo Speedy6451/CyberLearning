@@ -20,6 +20,7 @@ public class TitleScreen extends ScreenAdapter {
 		// play title music
 		titleMusic =  Gdx.audio.newMusic(Gdx.files.internal("music/New Hope.ogg"));
 		titleMusic.setLooping(true);
+		titleMusic.setVolume(game.volume);
 		titleMusic.play();
 
 		// go to level1 on enter press
@@ -39,8 +40,8 @@ public class TitleScreen extends ScreenAdapter {
 		Gdx.gl.glClearColor(0, .25f, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		game.batch.begin();
-		game.font.draw(game.batch, "I forgot the title", MyGdxGame.screenX/4, MyGdxGame.screenY*.75f);
-		game.font.draw(game.batch, "Press enter to begin", MyGdxGame.screenX/4, MyGdxGame.screenY/2);
+		game.font.draw(game.batch, "bit revanche", MyGdxGame.screenX/4, MyGdxGame.screenY*.75f);
+		game.font.draw(game.batch, "press enter to begin", MyGdxGame.screenX/4, MyGdxGame.screenY/2);
 		game.batch.end();
 
 	}
