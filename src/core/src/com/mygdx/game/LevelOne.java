@@ -13,6 +13,7 @@ import com.badlogic.gdx.maps.tiled.TiledMapRenderer;
 import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputAdapter;
 
@@ -21,6 +22,7 @@ public class LevelOne extends ScreenAdapter {
 	TiledMap map;
 	TiledMapRenderer tiledMapRenderer;
 	Music music;
+	Sprite player;
 	float deltaT = 0;
 	boolean w = false;
 	boolean a = false;
@@ -107,8 +109,8 @@ public class LevelOne extends ScreenAdapter {
 
 	@Override
 	public void hide() {
-		// music.stop();
-		// music.dispose();
+		music.stop();
+		music.dispose();
 		map.dispose();
 	}
 }
